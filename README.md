@@ -9,8 +9,14 @@ Here is a quick guide to get started with Velolia Container.
 
 To start using Velolia Container, you need to create an instance of the container:
 
-php
-Copy code
+```php
 use Velolia\Container\Container;
 
 $container = new Container();
+
+$container->bind('logger', function () {
+    return new Monolog\Logger('app');
+});
+
+$logger = $container->get('logger');
+$logger->info("This is a log message.");
