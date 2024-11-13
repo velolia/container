@@ -14,9 +14,8 @@ use Velolia\Container\Container;
 
 $container = new Container();
 
-$container->bind('logger', function () {
-    return new Monolog\Logger('app');
+$container->singleton('logger', function () {
+    return new Logger();
 });
 
-$logger = $container->get('logger');
-$logger->info("This is a log message.");
+$container->make('logger');
