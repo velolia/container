@@ -15,15 +15,17 @@ $container->singleton('logger', function () {
     return new Logger();
 });
 
+$container->singleton('logger', fn () => new Logger());
+
+$container->make('logger');
+
 ```
 
 OR
 ```php
 use Velolia\Container\Container;
 
-$container->singleton('logger', fn () => new Logger());
-
-$container->make('logger');
+$container = new Container();
 
 $container->singleton(Router::class, $this);
 
