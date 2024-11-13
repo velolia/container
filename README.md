@@ -23,6 +23,7 @@ OR
 $container->singleton('logger', fn () => new Logger());
 
 $container->make('logger');
+
 OR
 
 $container->singleton(Router::class, $this);
