@@ -18,14 +18,18 @@ $container->singleton('logger', function () {
     return new Logger();
 });
 
+```
+
 OR
+```php
+use Velolia\Container\Container;
 
 $container->singleton('logger', fn () => new Logger());
 
 $container->make('logger');
 
-OR
-
 $container->singleton(Router::class, $this);
 
 $container->make(Router::class);
+
+```
