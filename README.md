@@ -1,5 +1,5 @@
 # Velolia Container
-Velolia Container is a lightweight and efficient dependency injection (DI) container for PHP, designed to make it easier to manage object dependencies within your applications. Inspired by modern PHP DI principles, Velolia Container aims to streamline dependency management, enhance code modularity, and improve testability.
+Velolia Container is a lightweight and efficient dependency injection (DI) container for PHP, designed to make it easier to manage object dependencies within your applications. Inspired by modern PHP DI principles, Velolia Container aims to streamline dependency management, enhance code modularity.
 
 # Basic Usage
 Create a Container Instance
