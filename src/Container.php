@@ -19,7 +19,7 @@ class Container implements ContainerInterface
      * 
      * @var static
     */
-    protected static $instrance;
+    protected static $instance;
 
     /**
      * container bindings
@@ -56,7 +56,7 @@ class Container implements ContainerInterface
     */
     public static function setInstance(ContainerInterface $container = null)
     {
-        return static::$instrance = $container;
+        return static::$instance = $container;
     }
 
     /**
@@ -66,11 +66,11 @@ class Container implements ContainerInterface
     */
     public static function getInstance(): static
     {
-        if (is_null(static::$instrance)) {
-            static::$instrance = new static();
+        if (is_null(static::$instance)) {
+            static::$instance = new static();
         }
 
-        return static::$instrance;
+        return static::$instance;
     }
 
     /**
