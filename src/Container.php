@@ -54,7 +54,7 @@ class Container implements ContainerInterface
      * 
      * @param ContainerInterface|null $container
     */
-    public static function setInstance(ContainerInterface $container = null)
+    public static function setInstance(?ContainerInterface $container = null)
     {
         return static::$instance = $container;
     }
